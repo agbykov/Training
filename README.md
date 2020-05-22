@@ -6,11 +6,14 @@ Owner: **Alexis Bykov**
 
 Topics: **Terraform, ...**
 
-**Note:** Do 'aws configuration' before use terraform commands or see Exports commands below to set AWS credentials and default region values
+**Note:** Before use terraform commands do **aws configuration** or see Exports commands below to set AWS credentials and default region values
 
-## Main Terraform's Commands
+## Useful Terraform's Commands
 
     terraform init
+    terraform validate
+    teraform fmt
+    tflint
     terraform plan
     terraform apply
     terraform destroy
