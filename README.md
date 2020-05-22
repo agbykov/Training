@@ -2,24 +2,20 @@
 ## Terraform training 
 ### test
 
-username: **admin**
+Owner: **Alexis Bykov**
 
-password: **secret**
+Topics: **Terraform, ...**
 
-**Note:** To enable Authentication again after success login clear the browser cache.
+**Note:** Do 'aws configuration' before use terraform commands or see Exports commands below to set AWS credentials and default region values
 
-## Commands for deployment Flask application
+## Main Terraform's Commands
 
-    sudo apt update
-    sudo apt -y install python3 python3-venv python3-dev
+    terraform init
+    terraform plan
+    terraform apply
+    terraform destroy
 
-    cd ~/webservice
-    python3 -m venv venv
-    source venv/bin/activate
-    pip install -r requirements.txt
-
-    export FLASK_APP=webservice.py
-    echo "export FLASK_APP=webservice.py" >> ~/.profile
-
-## Commands for run Flask application on port 80    
-    sudo ~/webservice/venv/bin/flask run --port=80
+## Exports for AWS credentials and default region    
+    export AWS_ACCESS_KEY_ID=...
+    export AWS_SECRET_ACCESS_KEY=...
+    export AWS_DEFAULT_REGION=eu-central-1
