@@ -13,7 +13,7 @@ resource "aws_instance" "my_websever" {
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.my_webserver.id]
   key_name               = "agbykov-Frankfurt2"
-  user_data              = file("./user-data.sh")
+  user_data              = file("user-data.sh")
   tags = {
     Name    = "my_Amazon"
     Owner   = "Alexis Bykov"
