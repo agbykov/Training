@@ -54,7 +54,7 @@ resource "aws_security_group" "my_webserver" {
   }
 
   tags = {
-    Name    = "allow_webserver"
+    Name    = "allow_webserver HTTP(S) and SSH"
     Owner   = "Alexis Bykov"
     Project = "Terraform Lessons"
   }
