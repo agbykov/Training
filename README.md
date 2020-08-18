@@ -1,6 +1,6 @@
 # Training
 ## Terraform training 
-### test
+### h3
 
 Owner: **Alexis Bykov**
 

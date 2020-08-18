@@ -1,7 +1,7 @@
 #-----------------------------------------------------------
 # My Terraform
 #
-# Build Web Server diuring boot strap
+# Build Web Server during boot strap
 #-----------------------------------------------------------
 
 provider "aws" {
