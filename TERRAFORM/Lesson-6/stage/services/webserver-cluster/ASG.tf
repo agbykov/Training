@@ -1,6 +1,17 @@
 provider "aws" {
   region = "eu-central-1"
 }
+
+terraform {
+  backend "s3" {
+    bucket         = "terraform-lesson-6-state"
+    key            = "stage/services/webserver-cluster/terraform.tfstate"
+    region         = "eu-central-1"
+    dynamodb_table = "terraform-lesson-6-locks"
+    encrypt        = true
+  }
+}
+
 data "aws_vpc" "default" {
   default = true
 }
