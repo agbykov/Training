@@ -1,8 +1,10 @@
-provider "aws" {
-  region = "eu-central-1"
-}
-
 terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.0"
+    }
+  }
   backend "s3" {
     bucket         = "terraform-lesson-6-state"
     key            = "stage/services/webserver-cluster/terraform.tfstate"
@@ -10,6 +12,10 @@ terraform {
     dynamodb_table = "terraform-lesson-6-locks"
     encrypt        = true
   }
+}
+
+provider "aws" {
+  region = "eu-central-1"
 }
 
 resource "aws_db_instance" "example" {
