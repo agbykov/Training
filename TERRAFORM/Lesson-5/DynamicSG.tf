@@ -13,7 +13,7 @@ resource "aws_security_group" "my_webserver" {
   description = "Dynamic Web Server Security Group Open 22/80/443 ports"
 
   dynamic "ingress" {
-    for_each ["80", "443", "22"]
+    for_each = ["80", "443", "22"]
   content {
       from_port   = ingress.value
       to_port     = ingress.value
